@@ -1,2 +1,11 @@
 <app-server></app-server>
 <app-server></app-server>
+    <!-- the [] square bracket tells angular that we are using property binding on that HTML tag attribute.
+    here "disabled" is an attribute we can use on HTML tags like the button tag, input tag etc. -->
+<button class="btn btn-primary" [disabled]="!allowNewServer">
+    <!-- logically, when the allowNewServer property becomes true in the TS code, the button should be enabled
+    but since we are binding with the disabled property, setting the disabled property to be true would 
+    disable the button and defeat the purpose. so we have ! before allowNewServer to get the opposite value of
+    the var -->
+    Add Servers
+</button>
