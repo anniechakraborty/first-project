@@ -1,10 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-6">
+      <!-- this was an example of two way data binding. we use the ng<odel directive for this -->
       <input type="text" [(ngModel)] = "name">
       <p>{{name}}</p>
       <hr>
-      <app-server></app-server>
+      <label for="INP">
+        Server name
+      </label>
+      <!-- there is some error in the following line byut watch the 35th video again later -->
+      <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+      <input type="text" class="form-control" [(ngModel)]="name">
+      <!-- <p> {{ name }} </p>  -->
+      <hr><hr>
+      <app-test-component></app-test-component>
     </div>
     <div class="col-xs-6">
       <h3>I am the {{title}} </h3>

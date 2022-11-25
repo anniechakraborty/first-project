@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   // Add Server and we are going to bind computed value to the button property in that file
   allowNewServer = false;
   serverCreationStatus = "No server was created !";
+  serverName = "";
   constructor(){
     setTimeout( ()=> {
       this.allowNewServer = true;
@@ -21,6 +22,6 @@ export class ServersComponent implements OnInit {
   }
 
   onServerCreation(){
-    this.serverCreationStatus = 'New server was created!';
+    this.serverCreationStatus = 'New server was created! The name is : ' + this.serverName;
   }
 }

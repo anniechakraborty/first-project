@@ -1,0 +1,6 @@
+<p>test-component works!</p>
+<input type="text" class="form-control" name="username" id="username" [(ngModel)]="username">
+<p>{{ username }}</p>
+<button class="btn btn-success" [disabled]="checkUsername()" (click)="this.username = ''">
+    Clear
+</button>

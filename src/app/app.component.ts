@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my new first-project';
   name = 'add to me ...';
+  onUpdateServerName(event, Event){
+    this.name = (<HTMLInputElement>event.target).value;
+  }
 }
