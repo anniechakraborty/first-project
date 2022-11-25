@@ -9,7 +9,7 @@ export class ServersComponent implements OnInit {
   // to demonstrate property binding, we created a new button (in the template file) called
   // Add Server and we are going to bind computed value to the button property in that file
   allowNewServer = false;
-
+  serverCreationStatus = "No server was created !";
   constructor(){
     setTimeout( ()=> {
       this.allowNewServer = true;
@@ -18,5 +18,9 @@ export class ServersComponent implements OnInit {
   }
   ngOnInit(): void {
     
+  }
+
+  onServerCreation(){
+    this.serverCreationStatus = 'New server was created!';
   }
 }
