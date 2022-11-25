@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class TestComponentComponent {
   username: string = '';
   isEmpty : boolean = true;
+  textVisibility : boolean = true;
   checkUsername(){
     if (this.username == ''){
       return true;
@@ -15,5 +16,11 @@ export class TestComponentComponent {
     else{
       return false;
     }
+  }
+  seeText(){
+    this.textVisibility = true;
+  }
+  hideText(){
+    this.textVisibility = false;
   }
 }

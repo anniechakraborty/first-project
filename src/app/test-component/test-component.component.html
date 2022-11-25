@@ -1,6 +1,18 @@
-<p>test-component works!</p>
 <input type="text" class="form-control" name="username" id="username" [(ngModel)]="username">
-<p>{{ username }}</p>
+<p>
+    {{ username }}
+</p>
 <button class="btn btn-success" [disabled]="checkUsername()" (click)="this.username = ''">
     Clear
+</button>
+<hr>
+<!-- using ngIf directive  -->
+<p *ngIf="textVisibility">
+    Watch me disappear!
+</p>
+<button class="btn btn-success" (click)="seeText()">
+    See Text
+</button>
+<button class="btn btn-primary" (click)="hideText()">
+    Hide Text
 </button>
