@@ -1,5 +1,13 @@
-<p>Hello, welcome to the {{ 'server ' }} {{ serverID }}</p>
-<p>{{'The server '}} is {{ status }}</p>
-<hr>
-<p>Server name : {{ getServerName() }}</p>
+<!-- using ngstyle -->
+<!-- check the def of getColour(), the valueis changed dynamically based on the status value -->
+<div [ngStyle]="{color : getColour()}" [ngClass]="{online : status == 'online' ? true : false}">
+    <!-- we are using property binding on ngStyle, which is an attribute directive 
+        (so we are technically doing property binding on an attribute).
+        The ngStyle property expects a JavaScript object.
+        The {color : 'value'} is a JavaScript object where we are have key value pairs. 
+        The keys are CSS properties and the values are the property values.
+    -->
+<p>Hello, welcome to the {{ 'server ' }} {{ serverID }}. Server name : {{ getServerName() }}</p>
+<p>Server status : {{ status }}</p>
+</div>
 <hr>
