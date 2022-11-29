@@ -14,7 +14,12 @@
 </button>
 <input type="text" class="form-control" [(ngModel)]="serverName">
 <hr>
-<p>
+<!-- using structural directive ngFor which adds or HTML elements in the DOM based on the number of 
+    elements in the array (here serversCreated). the number of elements in this array is increased every time
+    the above button is clicked (as it calls onServerCreation() function where we have added the push logic 
+    to push elements in the array).
+ -->
+<p *ngFor="let server of serversCreated">
     {{ serverCreationStatus }}
 </p>
 <!-- property binding Vs string interpolation -->
