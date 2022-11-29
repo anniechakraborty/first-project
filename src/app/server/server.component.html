@@ -1,5 +1,5 @@
 <!-- using ngstyle -->
-<!-- check the def of getColour(), the valueis changed dynamically based on the status value -->
+<!-- check the def of getColour(), the value is changed dynamically based on the status value -->
 <div [ngStyle]="{color : getColour()}" [ngClass]="{online : status == 'online' ? true : false}">
     <!-- we are using property binding on ngStyle, which is an attribute directive 
         (so we are technically doing property binding on an attribute).

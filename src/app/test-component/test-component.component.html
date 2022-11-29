@@ -6,6 +6,7 @@
     Clear
 </button>
 <hr>
+
 <!-- using ngIf directive  -->
 <p *ngIf="textVisibility">
     Watch me disappear!
@@ -16,3 +17,17 @@
 <button class="btn btn-primary" (click)="hideText()">
     Hide Text
 </button>
+<div class="container margin">
+    <p *ngIf="textVisibility">
+        Lorem ipsum dolor sit amet
+    </p>
+    <button class="btn btn-warning" (click)="toggleVisibiltyRandom()">
+        Toggle display details
+    </button>    
+    <p *ngFor="let counter of buttonClicks; let i = index;">
+        {{i}} Button click : {{counter}}
+        <br>
+        <span [ngStyle]="{color : 'red'}" [ngClass]="{borderCol : i > 4 ? true : false}"> changing colour based on index value {{i}}</span>
+    </p>
+</div>
+
